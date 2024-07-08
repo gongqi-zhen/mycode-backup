@@ -1,3 +1,4 @@
 .env
 contents/
 node_modules/
+logs/

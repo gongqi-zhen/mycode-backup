@@ -3,7 +3,7 @@ module.exports = [
     ignores: ["node_modules/**"],
   },
   {
-    files: ["*.js"],
+    files: ["*.js", "src/*.js", "src/__tests__/*.js"],
     languageOptions: {
       ecmaVersion: "latest",
     },
