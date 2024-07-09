@@ -173,6 +173,23 @@ const contentsfumfumUrls = [
   { url: "https://mycode.jp/fumfum/novelty-seeking", name: "新しいものへの好奇心(novelty-seeking)" },
 ];
 
+const geneticTestingUrls = [
+  { url: "https://mycode.jp/whatisdna.html", name: "遺伝子検査のご説明"},
+  { url: "https://mycode.jp/whatisdna/genes.html", name: "遺伝子について"},
+  { url: "https://mycode.jp/whatisdna/testing.html", name: "遺伝子検査とは"},
+  { url: "https://mycode.jp/whatisdna/future.html", name: "遺伝子検査の進化と未来"},
+];
+
+const MYCODEfeatureUrls = [
+  { url: "https://mycode.jp/benefits.html", name: "MYCODEの特徴"},
+  { url: "https://mycode.jp/benefits/voices.html", name: "お客様の声"},
+  { url: "https://mycode.jp/benefits/analysis.html", name: "分析の質"},
+  { url: "https://mycode.jp/benefits/basis.html", name: "科学的根拠の質"},
+  { url: "https://mycode.jp/benefits/provision.html", name: "情報提供の質"},
+  { url: "https://mycode.jp/benefits/infosec.html", name: "情報セキュリティーについて"},
+  { url: "https://mycode.jp/howitworks/process.html", name: "検査方法について"},
+];
+
 function getContentUrls() {
   return [
     ...terminationUrls,
@@ -181,6 +198,8 @@ function getContentUrls() {
     ...lifestyleSupportUrls,
     ...optionUrls,
     ...contentsfumfumUrls,
+    ...geneticTestingUrls,
+    ...MYCODEfeatureUrls,
   ];
 }
   
