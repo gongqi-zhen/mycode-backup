@@ -190,6 +190,17 @@ const MYCODEfeatureUrls = [
   { url: "https://mycode.jp/howitworks/process.html", name: "検査方法について"},
 ];
 
+const MYCODEexaminationUrls = [
+  {url: "https://mycode.jp/plans.html", name: "検査メニュー"},
+  {url: "https://mycode.jp/plans/summary.html#!/diseases", name: "検査項目の一覧(疾患の検査項目)"},
+  {url: "https://mycode.jp/plans/summary.html#!/traits", name: "検査項目の一覧(体質の検査項目)"},
+  {url: "https://mycode.jp/plans/summary.html#!/ancestries", name: "検査項目の一覧(祖先の検査項目)"},
+  {url: "https://mycode.jp/plans/snplist-disease.html", name: "検査SNP一覧(疾患)"},
+  {url: "https://mycode.jp/plans/snplist-trait.html", name: "検査SNP一覧(体質)"},
+  {url: "https://mycode.jp/plans/snplist-ancestries.html", name: "検査SNP一覧(祖先)"},
+  {url: "https://mycode.jp/plans/optional-testing-items/covid-19.html", name: "COVID-19（新型コロナウイルス）検査項目"},
+];
+
 function getContentUrls() {
   return [
     ...terminationUrls,
@@ -200,6 +211,7 @@ function getContentUrls() {
     ...contentsfumfumUrls,
     ...geneticTestingUrls,
     ...MYCODEfeatureUrls,
+    ...MYCODEexaminationUrls
   ];
 }
   
