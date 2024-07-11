@@ -201,6 +201,20 @@ const MYCODEexaminationUrls = [
   {url: "https://mycode.jp/plans/optional-testing-items/covid-19.html", name: "COVID-19（新型コロナウイルス）検査項目"},
 ];
 
+const MYCODEcompanyUrls = [
+  {url: "https://mycode.jp/whoweare.html", name: "私たちについて"},
+  {url: "https://mycode.jp/whoweare/mission.html", name: "運営会社について"},
+  {url: "https://mycode.jp/whoweare/partner.html", name: "COI STREAMについて"},
+  {url: "https://mycode.jp/terms.html", name: "会員規約"},
+  {url: "https://mycode.jp/terms/informedconsent.html", name: "検査申し込みに関する説明事項"},
+  {url: "https://mycode.jp/privacy.html", name: "個人情報保護方針"},
+  {url: "https://mycode.jp/transactions.html", name: "特定商取引法に基づく表記"},
+  {url: "https://mycode.jp/glossary.html", name: "用語集"},
+  {url: "https://mycode.jp/faq.html", name: "FAQ（よくあるご質問）"},
+  {url: "https://mycode.jp/inquiry.html", name: "お問い合わせ"},
+  {url: "https://mycode.jp/information.html", name: "MYCODEからのお知らせ"},
+];
+
 function getContentUrls() {
   return [
     ...terminationUrls,
@@ -211,7 +225,8 @@ function getContentUrls() {
     ...contentsfumfumUrls,
     ...geneticTestingUrls,
     ...MYCODEfeatureUrls,
-    ...MYCODEexaminationUrls
+    ...MYCODEexaminationUrls,
+    ...MYCODEcompanyUrls,
   ];
 }
   
