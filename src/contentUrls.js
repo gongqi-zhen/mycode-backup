@@ -172,13 +172,103 @@ const contentsfumfumUrls = [
   { url: "https://mycode.jp/my/fumfum/novelty-seeking?int=fum_top", name: "新しいものへの好奇心(結果)" },
   { url: "https://mycode.jp/fumfum/novelty-seeking", name: "新しいものへの好奇心(novelty-seeking)" },
 ];
+
+// 遺伝子検査のご説明
+const geneticTestingUrls = [
+  { url: "https://mycode.jp/whatisdna.html", name: "遺伝子検査のご説明"},
+  { url: "https://mycode.jp/whatisdna/genes.html", name: "遺伝子について"},
+  { url: "https://mycode.jp/whatisdna/testing.html", name: "遺伝子検査とは"},
+  { url: "https://mycode.jp/whatisdna/future.html", name: "遺伝子検査の進化と未来"},
+];
+
+// MYCODEの特徴
+const MYCODEfeatureUrls = [
+  { url: "https://mycode.jp/benefits.html", name: "MYCODEの特徴"},
+  { url: "https://mycode.jp/benefits/voices.html", name: "お客様の声"},
+  { url: "https://mycode.jp/benefits/analysis.html", name: "分析の質"},
+  { url: "https://mycode.jp/benefits/basis.html", name: "科学的根拠の質"},
+  { url: "https://mycode.jp/benefits/provision.html", name: "情報提供の質"},
+  { url: "https://mycode.jp/benefits/infosec.html", name: "情報セキュリティーについて"},
+  { url: "https://mycode.jp/howitworks/process.html", name: "検査方法について"},
+];
+
+// 検査メニュー
+const MYCODEexaminationUrls = [
+  {url: "https://mycode.jp/plans.html", name: "検査メニュー"},
+  {url: "https://mycode.jp/plans/summary.html#!/diseases", name: "検査項目の一覧(疾患の検査項目)"},
+  {url: "https://mycode.jp/plans/summary.html#!/traits", name: "検査項目の一覧(体質の検査項目)"},
+  {url: "https://mycode.jp/plans/summary.html#!/ancestries", name: "検査項目の一覧(祖先の検査項目)"},
+  {url: "https://mycode.jp/plans/snplist-disease.html", name: "検査SNP一覧(疾患)"},
+  {url: "https://mycode.jp/plans/snplist-trait.html", name: "検査SNP一覧(体質)"},
+  {url: "https://mycode.jp/plans/snplist-ancestries.html", name: "検査SNP一覧(祖先)"},
+  {url: "https://mycode.jp/plans/optional-testing-items/covid-19.html", name: "COVID-19（新型コロナウイルス）検査項目"},
+];
+
+// 私たちについて
+const MYCODEcompanyUrls = [
+  {url: "https://mycode.jp/whoweare.html", name: "私たちについて"},
+  {url: "https://mycode.jp/whoweare/mission.html", name: "運営会社について"},
+  {url: "https://mycode.jp/whoweare/partner.html", name: "COI STREAMについて"},
+  {url: "https://mycode.jp/terms.html", name: "会員規約"},
+  {url: "https://mycode.jp/terms/informedconsent.html", name: "検査申し込みに関する説明事項"},
+  {url: "https://mycode.jp/privacy.html", name: "個人情報保護方針"},
+  {url: "https://mycode.jp/transactions.html", name: "特定商取引法に基づく表記"},
+  {url: "https://mycode.jp/glossary.html", name: "用語集"},
+  {url: "https://mycode.jp/faq.html", name: "FAQ（よくあるご質問）"},
+  {url: "https://mycode.jp/inquiry.html", name: "お問い合わせ"},
+  {url: "https://mycode.jp/information.html", name: "MYCODEからのお知らせ"},
+];
+
+// MYCODEトピックス
+const MYCODEtopicsUrls = [
+  {url: "https://mycode.jp/topics.html", name: "全項目"},
+  {url: "https://mycode.jp/topics/genes.html", name: "遺伝子"},
+  {url: "https://mycode.jp/topics/child-rearing.html", name: "育児・子供"},
+  {url: "https://mycode.jp/topics/life.html", name: "食事・生活"},
+  {url: "https://mycode.jp/topics/physical.html", name: "体質・身体"},
+  {url: "https://mycode.jp/topics/diseases.html", name: "病気・医療"},
+];
+
+// MYCODE Research
+const MYCODEresearchUrls = [
+  {url: "https://mycode.jp/survey/research.html?int=gmenu", name: "MYCODE Research"},
+  {url: "https://mycode.jp/my/research/results/computer-vision-syndrome", name: "眼の症状に関わる遺伝要因の探索研究結果"},
+  {url: "https://mycode.jp/my/research/results/gwas-hair-morphology-2023", name: "髪質に関わる遺伝要因の探索研究結果"},
+  {url: "https://mycode.jp/my/research/results/covid-19-vaccine-survey", name: "新型コロナワクチンに対する態度と副反応に関する調査結果"},
+  {url: "https://mycode.jp/my/research/results/gwas-lifestyle-2022", name: "日本人の食習慣や睡眠に関わる遺伝的特徴を発見"},
+  {url: "https://mycode.jp/survey/research/influenza21-23", name: "【2021-2023年】インフルエンザ"},
+  {url: "https://mycode.jp/survey/research/restless-legs-syndrome", name: "むずむず脚症候群（レストレスレッグス症候群）"},
+  {url: "https://mycode.jp/survey/research/medical-history", name: "あなたの病歴・家族の病歴"},
+  {url: "https://mycode.jp/survey/research/geographical-information", name: "地理的情報についてのアンケートの集計状況"},
+  {url: "https://mycode.jp/survey/research/norovirus", name: "ノロウイルス耐性についてのアンケートの集計状況"},
+  {url: "https://mycode.jp/survey/research/height", name: "身長についてのアンケートの集計状況"},
+  {url: "https://mycode.jp/survey/research/drinking-coffee", name: "コーヒー摂取傾向についてのアンケートの集計状況"},
+  {url: "https://mycode.jp/survey/research/dental-caries", name: "虫歯についてのアンケートの集計状況"},
+  {url: "https://mycode.jp/survey/research/birth-body-size", name: "出生時の体のサイズについてのアンケートの集計状況"},
+  {url: "https://mycode.jp/survey/research/androgenetic-alopecia", name: "男性型脱毛症（既往歴を含む）"},
+  {url: "https://mycode.jp/survey/research/dominant-eye", name: "利き目についてのアンケートの集計状況"},
+  {url: "https://mycode.jp/survey/research/dry-eye", name: "ドライアイについてのアンケートの集計状況"},
+  {url: "https://mycode.jp/survey/research/drinking", name: "飲酒歴についてのアンケートの集計状況"},
+];
+
+function getContentUrls() {
+  return [
+    { title: "サービス終了のお知らせ", links: terminationUrls },
+    { title: "アカウント", links: accountUrls },
+    { title: "検査結果", links: testResultsUrls },
+    { title: "生活習慣サポート", links: lifestyleSupportUrls },
+    { title: "オプション", links: optionUrls },
+    { title: "MYCODE fumfum", links: contentsfumfumUrls },
+    { title: "遺伝子検査のご説明", links: geneticTestingUrls },
+    { title: "MYCODEの特徴", links: MYCODEfeatureUrls },
+    { title: "検査メニュー", links: MYCODEexaminationUrls },
+    { title: "私たちについて", links: MYCODEcompanyUrls },
+    { title: "MYCODEトピックス", links: MYCODEtopicsUrls},
+    { title: "MYCODE Research", links: MYCODEresearchUrls},
+  ];
+}
   
 module.exports = {
-  terminationUrls,
-  accountUrls,
-  testResultsUrls,
-  lifestyleSupportUrls,
-  optionUrls,
-  contentsfumfumUrls,
+  getContentUrls,
 };
   

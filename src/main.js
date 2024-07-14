@@ -3,15 +3,13 @@ const config = require("./config");
 const log = require("./logger");
 const loginToMyCode = require("./login");
 const saveContents = require("./saveContents");
-const generateIndexHtml = require("./generateIndex");
-const { getContentUrls } = require("./urls");
+const generateIndexHtml = require("./generateIndexHtml");
+const { getContentUrls } = require("./contentUrls");
 
 (async () => {
   const browser = await chromium.launch({ headless: false });
   const context = await browser.newContext();
   const page = await context.newPage();
-
-  let links = [];
 
   try {
     const { username, password, secretAnswer } = config;
@@ -20,15 +18,13 @@ const { getContentUrls } = require("./urls");
 
     const contentUrls = getContentUrls();
 
-    for (const item of contentUrls) {
-      const { url, name } = item;
-      const filePath = await saveContents(page, url);
-      if (filePath) {
-        links.push({ url, name, filePath });
+    for (const category of contentUrls) {
+      for (const link of category.links) {
+        await saveContents(page, link.url);
       }
     }
 
-    generateIndexHtml(links);
+    generateIndexHtml(contentUrls);
   } catch (error) {
     log(`An error occurred: ${error.message}`);
   } finally {

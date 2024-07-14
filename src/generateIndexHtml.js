@@ -2,10 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const log = require("./logger");
 
-function generateIndexHtml(links) {
+function generateIndexHtml(categories) {
   try {
     const indexPath = path.join(__dirname, "../contents", "index.html");
-    
+
     let htmlContent = `
       <!DOCTYPE html>
       <html lang="ja">
@@ -34,6 +34,14 @@ function generateIndexHtml(links) {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
           }
+          section {
+            margin-bottom: 2em;
+          }
+          h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 0.5em;
+          }
           ul {
             list-style-type: none;
             padding: 0;
@@ -60,18 +68,29 @@ function generateIndexHtml(links) {
           <h1>MYCODE Pages Index</h1>
         </header>
         <main>
-          <ul>
     `;
 
-    links.forEach(link => {
-      if (link.filePath) {
-        const relativePath = path.relative(path.dirname(indexPath), link.filePath);
-        htmlContent += `<li><a href="${relativePath}">${link.name}</a></li>\n`;
-      }
+    categories.forEach(category => {
+      htmlContent += `
+        <section>
+          <h2>${category.title}</h2>
+          <ul>
+      `;
+      category.links.forEach(link => {
+        const urlPath = new URL(link.url).pathname;
+        const savePath = path.join(__dirname, "../contents", urlPath);
+        const fileName = savePath.endsWith("/") ? "index.html" : 
+        (savePath.endsWith(".html") ? path.basename(savePath) : `${path.basename(savePath)}.html`);
+        const filePath = path.join(path.dirname(savePath), fileName);
+        htmlContent += `<li><a href="${filePath}">${link.name}</a></li>\n`;
+      });
+      htmlContent += `
+          </ul>
+        </section>
+      `;
     });
 
     htmlContent += `
-          </ul>
         </main>
       </body>
       </html>
