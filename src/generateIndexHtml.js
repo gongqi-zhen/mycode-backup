@@ -34,7 +34,7 @@ function generateIndexHtml(categories) {
         const urlPath = new URL(link.url).pathname;
         const savePath = path.join(__dirname, "../contents", urlPath);
         const fileName = savePath.endsWith("/") ? "index.html" : 
-        (savePath.endsWith(".html") ? path.basename(savePath) : `${path.basename(savePath)}.html`);
+          (savePath.endsWith(".html") ? path.basename(savePath) : `${path.basename(savePath)}.html`);
         const filePath = path.join(path.dirname(savePath), fileName);
         htmlContent += `<li><a href="${filePath}">${link.name}</a></li>\n`;
       });

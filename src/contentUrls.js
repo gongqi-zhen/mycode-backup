@@ -9,6 +9,7 @@ const accountUrls = [
   { url: "https://mycode.jp/my.html", name: "マイページ" },
   { url: "https://mycode.jp/my/password.html?int=gmenu", name: "パスワードと秘密の質問変更" },
   { url: "https://mycode.jp/my/verification_switch", name: "ログイン方式変更" },
+  { url: "https://mycode.jp/my/profile.html", name: "アカウント情報"},
   { url: "https://mycode.jp/my/profile/edit.html?int=gmenu", name: "アカウント情報変更" },
   { url: "https://mycode.jp/my/mail.html?int=gmenu", name: "メールアドレス変更" },
   { url: "https://mycode.jp/my/sales_orders.html?int=gmenu", name: "購入履歴" },
@@ -251,6 +252,28 @@ const MYCODEresearchUrls = [
   {url: "https://mycode.jp/survey/research/drinking", name: "飲酒歴についてのアンケートの集計状況"},
 ];
 
+// MYCODE Findings
+const MYCODEFindingsUrls = [
+  {url: "https://mycode.jp/findings.html?int=gmenu", name: "MYCODE Findings"},
+  {url: "https://mycode.jp/my/findings/computer-vision-syndrome.html", name: "眼の症状に関する研究"},
+  {url: "https://mycode.jp/my/findings/gwas-gutmicrobiota.html", name: "腸内細菌に関する研究"},
+];
+
+// MYCODEセミナー
+const MYCODESeminarsUrls = [
+  {url: "https://mycode.jp/seminars.html?int=gmenu", name: "MYCODEセミナー"},
+  {url: "https://mycode.jp/topics/life/hygiene/cold_constitution_211215.html?int=/seminars", name: "冷え症の原因と対策は？漢方医が解説～ノーベル医学生理学賞から冷え症を考える～【MYCODEセミナーレポート】"},
+  {url: "https://mycode.jp/topics/genes/research/gene_editing_200820.html?int=/seminars", name: "ゲノム編集とは何か？～農作物開発の現在と未来～【MYCODEセミナーレポート】"},
+  {url: "https://mycode.jp/topics/life/hygiene/lactic_acid_bacteria_200219.html?int=/seminars", name: "知っているようで知らない乳酸菌、健康に良い理由とは？【MYCODEセミナーレポート】"},
+  {url: "https://mycode.jp/topics/life/hygiene/sleeptech_200130.html?int=/seminars", name: "今さら聞けない、睡眠と健康の関係とは？専門家が教えます【MYCODEセミナーレポート】"},
+  {url: "https://mycode.jp/topics/life/hygiene/food_additive_191219.html?int=/seminars", name: "食品添加物って危険？安全？専門家に聞く正しいリスクの評価方法とは【MYCODEセミナーレポート】"},
+  {url: "https://mycode.jp/topics/life/neutral-fat/dyslipidemia_191113.html?int=/seminars", name: "コレステロール値が高いと何が問題なの！？医師が解説する正しい対策とは【MYCODEセミナーレポート】"},
+  {url: "https://mycode.jp/topics/diseases/symptom/fatty_liver_191017.html?int=/seminars", name: "なぜ日本人に脂肪肝が多いのか？～脂肪肝と遺伝子多型～【MYCODEセミナーレポート】"},
+  {url: "https://mycode.jp/topics/diseases/dementia/brain_training_190731.html?int=/seminars", name: "脳を鍛えて、健康に年を取る！「脳トレ」とスマート・エイジングの可能性を川島教授、大いに語る【MYCODEセミナーレポート】"},
+  {url: "https://mycode.jp/topics/physical/constitution/gut_microbiota_190717.html?int=/seminars", name: "腸内フローラで健康管理ができる？最新研究から読み解く腸内細菌の機能と可能性【MYCODEセミナーレポート】"},
+  {url: "https://mycode.jp/topics/genes/genetic-test/discovery_190526.html?int=/seminars", name: "日本人はどこから来たのか？ ～MYCODEセミナー「ミトコンドリアDNAでたどる日本人のルーツ」【レポート】"},
+];
+
 function getContentUrls() {
   return [
     { title: "サービス終了のお知らせ", links: terminationUrls },
@@ -265,6 +288,8 @@ function getContentUrls() {
     { title: "私たちについて", links: MYCODEcompanyUrls },
     { title: "MYCODEトピックス", links: MYCODEtopicsUrls},
     { title: "MYCODE Research", links: MYCODEresearchUrls},
+    { title: "MYCODE Findings", links: MYCODEFindingsUrls},
+    { title: "MYCODE セミナー", links: MYCODESeminarsUrls},
   ];
 }
   
