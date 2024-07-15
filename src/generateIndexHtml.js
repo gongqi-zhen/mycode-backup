@@ -5,6 +5,8 @@ const log = require("./logger");
 function generateIndexHtml(categories) {
   try {
     const indexPath = path.join(__dirname, "../contents", "index.html");
+    const cssPath = path.join(__dirname, "style.css");
+    const relativeCssPath = path.relative(path.dirname(indexPath), cssPath);
 
     let htmlContent = `
       <!DOCTYPE html>
@@ -13,55 +15,7 @@ function generateIndexHtml(categories) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MYCODE Pages Index</title>
-        <style>
-          body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-          }
-          header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-          }
-          main {
-            padding: 2em;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-          }
-          section {
-            margin-bottom: 2em;
-          }
-          h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 0.5em;
-          }
-          ul {
-            list-style-type: none;
-            padding: 0;
-          }
-          li {
-            margin: 0.5em 0;
-            padding: 0.5em;
-            border-bottom: 1px solid #ddd;
-          }
-          li:last-child {
-            border-bottom: none;
-          }
-          a {
-            text-decoration: none;
-            color: #3498db;
-          }
-          a:hover {
-            text-decoration: underline;
-          }
-        </style>
+        <link rel="stylesheet" href="${relativeCssPath}">
       </head>
       <body>
         <header>
