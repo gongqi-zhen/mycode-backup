@@ -1,4 +1,6 @@
 .env
 contents/
+contents_png/
 node_modules/
 logs/
+BFS/

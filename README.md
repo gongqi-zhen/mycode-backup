@@ -46,14 +46,25 @@ CAPCHA が表示される場合は、指定画像を選択してください。
 node src/main.js
 ```
 
+結果を画像(png)で残す場合は、引数に"--png"を指定してください。
+体質と祖先の検査結果などは html で保存するより画像で保存するのがより適切かもしれません。
+
+```bash
+node src/main.js --png
+```
+
 プログラムが起動すると、指定された MYCODE アカウントにログインし、遺伝子検査結果をローカルフォルダに保存します。
 
 ### 5. 結果の確認
 
-保存された遺伝子検査結果は、contents フォルダ内に保存されます。contents/index.html ファイルを開くと、各結果へのリンクが一覧表示されます。
+保存された遺伝子検査結果は、contents もしくは contents_png フォルダ内に保存されます。index.html ファイルを開くと、各結果へのリンクが一覧表示されます。
 
 ```bash
 open contents/index.html
+
+or
+
+open contents_png/index.html
 ```
 
 ### ライセンス

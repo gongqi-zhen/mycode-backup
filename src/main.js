@@ -6,6 +6,10 @@ const saveContents = require("./saveContents");
 const generateIndexHtml = require("./generateIndexHtml");
 const { getContentUrls } = require("./contentUrls");
 
+// コマンドライン引数を処理
+const args = process.argv.slice(2);
+const outputFormat = args.includes("--png") ? "png" : "html";
+
 (async () => {
   const browser = await chromium.launch({ headless: false });
   const context = await browser.newContext();
@@ -20,11 +24,11 @@ const { getContentUrls } = require("./contentUrls");
 
     for (const category of contentUrls) {
       for (const link of category.links) {
-        await saveContents(page, link.url);
+        await saveContents(page, link.url, outputFormat);
       }
     }
 
-    generateIndexHtml(contentUrls);
+    generateIndexHtml(contentUrls, outputFormat);
   } catch (error) {
     log(`An error occurred: ${error.message}`);
   } finally {

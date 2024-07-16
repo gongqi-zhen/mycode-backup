@@ -1,0 +1,41 @@
+body {
+  background-color: #fff5e6; /* 暖色系の背景色 */
+  color: #663300; /* 暖色系の文字色 */
+}
+
+header {
+  background-color: #cc6600; /* 暖色系のヘッダー背景色 */
+  color: #ffffff; /* 白色の文字色 */
+  padding: 10px 0;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+}
+
+a {
+  color: #ff6600; /* 暖色系のリンク色 */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
