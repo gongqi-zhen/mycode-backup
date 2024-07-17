@@ -1,6 +1,7 @@
 .env
 contents/
 contents_png/
+contents_archive/
 node_modules/
 logs/
 BFS/
