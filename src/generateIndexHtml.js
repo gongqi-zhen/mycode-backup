@@ -4,9 +4,9 @@ const log = require("./logger");
 
 function generateIndexHtml(categories, outputFormat) {
   try {
-    const baseDir = outputFormat === "png" ? "../contents_png" :  "../contents";
+    const baseDir = outputFormat === "png" ? "../contents_png" :  outputFormat === "webm" ? "../contents_video" : "../contents";
     const indexPath = path.join(__dirname, baseDir, "index.html");
-    const cssFileName = outputFormat === "png" ? "style_png.css" : "style.css";
+    const cssFileName = outputFormat === "png" ? "style_png.css" : outputFormat === "webm" ? "style_video.css" : "style.css";
     const cssPath = path.join(__dirname, cssFileName);
     const relativeCssPath = path.relative(path.dirname(indexPath), cssPath);
 

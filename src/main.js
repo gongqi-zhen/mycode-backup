@@ -8,7 +8,15 @@ const { getContentUrls } = require("./contentUrls");
 
 // コマンドライン引数を処理
 const args = process.argv.slice(2);
-const outputFormat = args.includes("--png") ? "png" : "html";
+let outputFormat;
+
+if (args.includes("--png")) {
+  outputFormat = "png";
+} else if (args.includes("--video")) {
+  outputFormat = "webm";
+} else {
+  outputFormat = "html";
+}
 
 (async () => {
   const browser = await chromium.launch({ headless: false });
