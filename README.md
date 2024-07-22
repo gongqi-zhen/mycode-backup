@@ -28,11 +28,14 @@ npm install
 .env ファイルを作成し、以下のようにご自身のユーザ名、パスワード、および秘密の質問への回答を記入します：
 
 ```bash
-cat .env
+cat .env.template
 
-USERNAME="あなたのユーザ名"
-PASSWORD="あなたのパスワード"
-SECRET_ANSWER="あなたの秘密の質問への回答"
+APP_USERNAME="あなたのユーザ名"
+APP_PASSWORD="あなたのパスワード"
+APP_SECRET_ANSWER="あなたの秘密の質問への回答"
+
+.envファイルに変更し、内容を正しいのものに修正してください
+mv .env.template .env
 ```
 
 ### 4. プログラムの実行
@@ -66,6 +69,10 @@ or
 
 open contents_png/index.html
 ```
+
+### 6. 他の環境でのセットアップについて
+
+[Windows 環境のセットアップ手順はこちら](SETUP_WINDOWS.md)
 
 ### ライセンス
 
