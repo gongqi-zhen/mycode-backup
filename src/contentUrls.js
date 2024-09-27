@@ -250,6 +250,7 @@ const MYCODEresearchUrls = [
   {url: "https://mycode.jp/survey/research/dominant-eye", name: "利き目についてのアンケートの集計状況"},
   {url: "https://mycode.jp/survey/research/dry-eye", name: "ドライアイについてのアンケートの集計状況"},
   {url: "https://mycode.jp/survey/research/drinking", name: "飲酒歴についてのアンケートの集計状況"},
+  {url: "https://mycode.jp/research-portal/hx89GKv7j", name: "MYCODE Research 研究プロジェクト参加者ページ"},
 ];
 
 // MYCODE Findings
